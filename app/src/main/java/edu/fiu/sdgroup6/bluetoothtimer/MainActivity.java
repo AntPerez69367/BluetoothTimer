@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     @SuppressWarnings("UnusedParameters")
     public void buttonClick(View v){
         EditText txtDescription =  (EditText) findViewById(R.id.editText);
-        String string = txtDescription.getText().toString() + "'s survey.";
+        String string = txtDescription.getText().toString();
 
         Intent changeClass = new Intent(MainActivity.this, SurveyActivity.class);
         changeClass.putExtra("id", string);
