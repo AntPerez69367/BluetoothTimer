@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">BluetoothTimer</string>
     <string name="action_settings">Settings</string>
+    <string name="intro_text">Please enter the survey ID</string>
+    <string name="survey_name">Enter Survey Name</string>
+    <string name="begin_survey">Begin Survey</string>
 </resources>
