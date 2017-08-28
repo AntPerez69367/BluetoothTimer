@@ -1,5 +1,6 @@
 package edu.fiu.sdgroup6.bluetoothtimer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,8 +9,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-    }
+
+         }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -48,5 +53,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("UnusedParameters")
+    public void buttonClick(View v){
+        EditText txtDescription =  (EditText) findViewById(R.id.editText);
+        String string = txtDescription.getText().toString() + "'s survey.";
+
+        Intent changeClass = new Intent(MainActivity.this, SurveyActivity.class);
+        changeClass.putExtra("id", string);
+        startActivity(changeClass);
     }
 }

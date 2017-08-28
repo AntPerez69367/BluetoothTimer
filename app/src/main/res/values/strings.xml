@@ -4,4 +4,5 @@
     <string name="intro_text">Please enter the survey ID</string>
     <string name="survey_name">Enter Survey Name</string>
     <string name="begin_survey">Begin Survey</string>
+    <string name="survey_activity_label">Test label here</string>
 </resources>
