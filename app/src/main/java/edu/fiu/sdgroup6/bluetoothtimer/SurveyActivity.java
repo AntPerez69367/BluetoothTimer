@@ -19,11 +19,12 @@ import java.util.List;
 
 public class SurveyActivity extends AppCompatActivity {
 
+    private static final String TAG = "SurveyActivity";
     private String p2pName;
     private WifiP2pManager mManager;
     private Channel mChannel;
     private BroadcastReceiver mReceiver;
-    private IntentFilter mIntentFilter = new IntentFilter();
+    private final IntentFilter mIntentFilter = new IntentFilter();
     private List<WifiP2pDevice> peers;
 
     private ListView mListView;
@@ -35,12 +36,12 @@ public class SurveyActivity extends AppCompatActivity {
         peers = new ArrayList<>();
         p2pName = setTitleName(savedInstanceState);
         if (p2pName.isEmpty()){
-            Log.d("p2pName", "No name specified.");
+            Log.d(TAG, "No name specified.");
             Toast.makeText(this, "Please enter a survey name.", Toast.LENGTH_SHORT).show();
             finish();
         }
         else {
-            Log.d("p2pName", "ok");
+            Log.d(TAG, "ok");
             InitializeP2P();
         }
     }
@@ -100,7 +101,7 @@ public class SurveyActivity extends AppCompatActivity {
 
 
                     if (peers.size() == 0) {
-                            Log.d("WiFi-Direct", "No devices found");
+                            Log.d(TAG, "No devices found");
                     }
                 }
             };
