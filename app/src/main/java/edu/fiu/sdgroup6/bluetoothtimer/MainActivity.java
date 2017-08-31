@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         EditText txtDescription =  (EditText) findViewById(R.id.editText);
         String string = txtDescription.getText().toString();
 
-        Intent changeClass = new Intent(MainActivity.this, SurveyActivity.class);
+        Intent changeClass = new Intent(MainActivity.this, WiFiDirectActivity.class);
         changeClass.putExtra("id", string);
         startActivity(changeClass);
     }

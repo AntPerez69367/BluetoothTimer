@@ -44,7 +44,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SurveyActivity"
+            android:name=".WiFiDirectActivity"
             android:label="@string/survey_activity_label"
             android:parentActivityName=".MainActivity">
             <meta-data
